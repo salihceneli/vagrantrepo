@@ -28,7 +28,9 @@ systemctl enable mariadb.service
 mysql -u root -e "SHOW DATABASES";
 
 # Download Starter Content
-
+cd /vagrant
+sudo -u vagrant wget -q https://raw.githubusercontent.com/salihceneli/vagrantrepo/master/files/index.html
+sudo -u vagrant wget -q https://raw.githubusercontent.com/salihceneli/vagrantrepo/master/files/info.php
 
 systemctl restart httpd.service
 
